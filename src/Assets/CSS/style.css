@@ -1,0 +1,25 @@
+.appBar {
+    background-color: #210d70 !important;
+}
+
+.logo {
+    height: 80px !important;
+}
+
+.HeroText {
+    color: #ffffff !important;
+}
+.Container {
+    
+        width: 100%;
+        height: 100%;
+    background-image: url("../img/Artboard-13.jpeg") !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    
+}
+

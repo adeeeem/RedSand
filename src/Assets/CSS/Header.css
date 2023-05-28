@@ -1,0 +1,35 @@
+.appBar {
+    background-color: #210d70 !important;
+}
+
+.logo {
+    height: 80px !important;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu:not(:last-child) {
+    margin-right: 20px;
+}
+.menu:hover{
+    color: rgb(187, 31, 39);
+    text-decoration: underline;
+}
+.menu:focus{
+    color: rgb(187, 31, 39);
+        text-decoration: underline;
+}
