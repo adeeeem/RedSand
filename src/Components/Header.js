@@ -1,11 +1,31 @@
-import React from "react";
-import { AppBar, Box, Button, Grid, Toolbar, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import "../Assets/CSS/Header.css";
 
 const Header = () => {
   const Logo = require("../Assets/img/Artboard-12.png");
+  const [isAppBarVisible, setAppBarVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setAppBarVisible(scrollTop === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <AppBar position="fixed" color="transparent" className="appBar">
+    <AppBar
+      position="Absolute"
+      color="transparent"
+      className={`appBar ${isAppBarVisible ? "visible" : "hidden"}`}
+    >
       <Toolbar className="toolbar">
         <Grid container alignItems="center">
           <Grid item xs={6} sm={4}>

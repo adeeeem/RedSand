@@ -33,3 +33,13 @@
     color: rgb(187, 31, 39);
         text-decoration: underline;
 }
+.appBarVisible {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.appBarHidden {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
